@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050816">
+  <title>Slide Fill Buttons Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Slide Fill Buttons Animation</h1>
+  </header>
+
+  <main class="showcase">
+    <section class="demo-panel">
+      <div class="demo-stage">
+        <button class="slide-btn btn1" type="button"><span>Left Fill</span></button>
+      </div>
+      <pre><code>.btn1::before {
+  width: 0%;
+  transition: .4s;
+}
+.btn1:hover::before {
+  width: 100%;
+}</code></pre>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-stage">
+        <button class="slide-btn btn2" type="button"><span>Center Fill</span></button>
+      </div>
+      <pre><code>.btn2::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.btn2:hover::before {
+  width: 120%;
+}</code></pre>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-stage">
+        <button class="slide-btn btn3" type="button"><span>Diagonal</span></button>
+      </div>
+      <pre><code>.btn3::before {
+  transform: skewX(-30deg);
+}
+.btn3:hover::before {
+  left: 100%;
+}</code></pre>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-stage">
+        <button class="slide-btn btn4" type="button"><span>Dual Fill</span></button>
+      </div>
+      <pre><code>.btn4::before,
+.btn4::after {
+  width: 0%;
+}
+.btn4:hover::before,
+.btn4:hover::after {
+  width: 50%;
+}</code></pre>
+    </section>
+
+    <section class="demo-panel">
+      <div class="demo-stage">
+        <button class="slide-btn btn5" type="button"><span>Liquid Fill</span></button>
+      </div>
+      <pre><code>.btn5::before {
+  bottom: -100%;
+}
+.btn5:hover::before {
+  bottom: 0;
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>Hover over each button to see the fill animation</footer>
+  <script src="script.js"></script>
+</body>
+</html>
